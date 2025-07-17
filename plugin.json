@@ -1,0 +1,10 @@
+{
+  "id": "acode-devplus",
+  "name": "Dev+ Tools",
+  "version": "1.0.0",
+  "author": "Saheb Ansari",
+  "description": "Powerful Node & Git tools inside Acode!",
+  "main": "main.js",
+  "icon": "icons/logo.png",
+  "pluginType": "sidebar"
+}

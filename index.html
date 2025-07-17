@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dev Stack - Acode Plugin</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Dev Stack</h1>
+  <div id="project-path">📂 Detecting project folder...</div>
+</header>
+
+<nav>
+  <button id="terminal-tab" class="active" onclick="switchTab('terminal')">Terminal</button>
+  <button id="files-tab" onclick="switchTab('files')">Files</button>
+  <button id="git-tab" onclick="switchTab('git')">Git</button>
+  <button id="settings-tab" onclick="switchTab('settings')">Settings</button>
+  <button id="update-tab" onclick="switchTab('update')">Update</button>
+</nav>
+
+<section id="terminal-content" class="tab-content">
+  <pre id="terminal-text" class="terminal-output"></pre>
+  <input type="text" id="command-input" placeholder="Enter command, e.g. npm install" onkeydown="handleCommandKey(event)" autocomplete="off" />
+</section>
+
+<section id="files-content" class="tab-content hidden">
+  <ul id="file-list"></ul>
+</section>
+
+<section id="git-content" class="tab-content hidden">
+  <h2>Git Commands</h2>
+  <label for="commit-message">Commit message:</label>
+  <input type="text" id="commit-message" placeholder="Enter commit message" />
+  <button onclick="gitCommitPush()">Commit & Push</button>
+  <button onclick="gitPull()">Pull</button>
+  <button onclick="gitClonePrompt()">Clone Repo</button>
+</section>
+
+<section id="settings-content" class="tab-content hidden">
+  <label>Theme:
+    <select id="theme-select" onchange="saveSettings()">
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+    </select>
+  </label>
+
+  <label>Shell:
+    <select id="shell-select" onchange="saveSettings()">
+      <option value="bash">Bash</option>
+      <option value="sh">Sh</option>
+      <option value="zsh">Zsh</option>
+    </select>
+  </label>
+
+  <label>Language:
+    <select id="lang-select" onchange="saveSettings()">
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+    </select>
+  </label>
+</section>
+
+<section id="update-content" class="tab-content hidden">
+  <h2>Plugin Updater</h2>
+  <button onclick="checkForUpdate()">Check for Update</button>
+  <div id="update-status"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
