@@ -1,10 +1,11 @@
 {
-  "id": "acode-devplus",
-  "name": "Dev+ Tools",
+  "name": "Dev Stack Terminal",
   "version": "1.0.0",
   "author": "Saheb Ansari",
-  "description": "Powerful Node & Git tools inside Acode!",
-  "main": "main.js",
-  "icon": "icons/logo.png",
-  "pluginType": "sidebar"
+  "type": "plugin",
+  "main": "index.html",
+  "icon": "💻",
+  "description": "Simulated terminal with basic npm/git/remote commands. Auto-updater ready.",
+  "permissions": [],
+  "preload": true
 }
