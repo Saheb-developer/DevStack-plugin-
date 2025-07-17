@@ -1,11 +1,16 @@
 {
-  "name": "Dev Stack Terminal",
+  "name": "Dev Stack",
+  "description": "All-in-one dev environment plugin for Acode: Node.js, npm, Git, terminal, file browser, and auto-updater.",
   "version": "1.0.0",
   "author": "Saheb Ansari",
-  "type": "plugin",
   "main": "index.html",
-  "icon": "💻",
-  "description": "Simulated terminal with basic npm/git/remote commands. Auto-updater ready.",
-  "permissions": [],
-  "preload": true
+  "permissions": [
+    "storage",
+    "fs",
+    "terminal",
+    "network"
+  ],
+  "acode": {
+    "type": "plugin"
+  }
 }
